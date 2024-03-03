@@ -28,7 +28,6 @@ author:
   location         : "Shenzhen"
   employer         : "Shenzhen University"
   uri              : # URL
-  phone            : "+86 15217060696"
   email            : "1422675202@qq.com"
 
   # Academic websites
@@ -66,7 +65,6 @@ author:
   telegram         : # URL
   tumblr           : # Username
   #twitter          : "UniofOxford"  # Replace this with your X / Twitter handle
-  phone            : "+86 15217060696"
   vine             : # Username
   weibo            : # Username
   wikipedia        : # Username
