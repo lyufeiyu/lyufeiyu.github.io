@@ -22,9 +22,9 @@ repository               : "academicpages/academicpages.github.io"
 author:
   # Biographic information
   avatar           : "myAvatar.png"
-  name             : "吕广华"
+  name             : "  吕广华"
   pronouns         : # example: "she/her"  
-  bio              : "深圳大学2020级本科生"
+  bio              : "   深圳大学2020级本科生"
   location         : "Shenzhen"
   employer         : "Shenzhen University"
   uri              : # URL
