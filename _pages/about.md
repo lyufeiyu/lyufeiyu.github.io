@@ -54,8 +54,8 @@ redirect_from:
 
 ### 一袋临食OneDrop项目
 
-| 时间 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | 描述 |
-| :------ | ----------------------------------- |
+| 时间 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| 描述 |
+| :-----------------: | ----------------------------------- |
 | 2021.07-2021.12 | 校园电商创业团队开发微信小程序卖临期食品。此项目我负责开发微信小程序前端，根据UI写代码，最后小程序成功上线且该项目获电信院挑战杯优胜奖 |
 
 ### 智慧校园-WeLink小程序（We码）
