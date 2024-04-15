@@ -112,7 +112,7 @@ redirect_from:
 
 | Time | Experimental Environment | Experimental Content |
 | --- | --- | --- | 
-| 2022.11-2022.12 | windows11+python3+flask+MySQL | Design a relational database for the car-sharing business described in the<br> prompt, and concurrently develop a front-end webpage to facilitate specific<br> interactions between the front and back ends. |
+| 2022.11-2022.12 | windows11+python3+flask+MySQL | Design a relational database for the car-sharing business <br>described in the prompt, and concurrently develop a front-end <br>webpage to facilitate specific interactions between the front <br>and back ends. |
 
 
 ### System Programming Major Project
