@@ -64,26 +64,26 @@ redirect_from:
 
 <br>
 
-# 本科实习经历
+# Undergraduate Internship Experience
 
 
 
-| 机构                                          | 职位      | 工作内容                                           |
+| Organization                                  | Position      | Job Description                                      |
 |---------------------------------------------|---------|--------------------------------------------------|
-| 深圳大学计算机与软件学院国家高性能计算中心深圳分中心 | 学生      | 为老师整理课程文档，给校企“智慧养鹅”合作项目标注数据标签     |
-| 深圳市中达瑞和科技有限公司                           | 数据分析实习生  | 学习csv表格数据清洗与重建，根据csv原文件生成伪数据文件     |
-| 深圳海关人工智能应用创新实验室                       | 数据分析实习生  | 整理并重构海关后端数据库表，同时对文本识别、字段提取算法进行研究 |
+| National High-Performance Computing Center (Shenzhen) | Student      | Organized course documents for teachers, annotated data labels for the "Smart Goose" project between school and enterprise     |
+| Shenzhen Zhongdaruihe Technology Co., Ltd.                           | Data Analysis Intern  | Learned CSV data cleaning and reconstruction, generated pseudo-data files based on original CSV files    |
+| Shenzhen Customs Artificial Intelligence Innovation Lab                | Data Analysis Intern  | Organized and restructured backend database tables for customs, researched text recognition and field extraction algorithms |
 
 
 <br>
 
-# 本科课外活动 / 志愿者工作
+# Undergraduate Extracurricular Activities / Volunteer Work
 
 
-| 类型 | 组织名称 | 业务性质 | 角色 | 参与期间 | 主要职责 |
+| Type | Organization | Nature of Business | Position Held | Participation Period | Main Responsibilities |
 |------|----------|---------|---------|----------|---------|
-| 志愿者工作 | 深圳大学计算<br>机与软件学院 | 辅导离散数学需<br>要补考的学生 | 学生<br>导师 | 2024.2.5～<br>2024.2.27 | 分享离散数学的学习资料和考试技巧。此外，我于2月19<br>日（从19:00到21:00）和2月25日（从18:00到20:00）举<br>办腾讯在线会议， 与同学们讨论离散数学问题。此外，<br>我还与一些学生通过私聊讨论问题。 |
-| 创业者 | 深圳向元文化<br>传播有限公司 | 无 | 监事 | 自2023年12<br>月12日起 | 由于我们是一家初创公司，我的主要工作在公司内并不是<br>非常固定的。可能在开发网页，有时可能外出摄影，有时<br>候与客户进行费用的谈判，有时会去接商业订单等等。 |
+| Volunteer Work | School of Computer Science and Software Engineering, Shenzhen University | Tutoring students who failed Discrete Mathematics | Student Tutor | 2024.02.05 - 2024.02.27 | Sharing study materials and exam tips for Discrete Mathematics. Additionally, I held online Tencent meetings on February 19th (from 19:00 to 21:00) and February 25th (from 18:00 to 20:00) to discuss Discrete Mathematics problems with classmates. Also, I usually had private chats with some students to discuss questions. |
+| Self-employed / Entrepreneur | Shenzhen Xiangyuan Cultural Communication Co., Ltd. | N/A | Supervisor | Since December 12, 2023 | As we are a startup company, my main tasks within the company are not very fixed. Sometimes I may be developing web pages, other times I might go out for photography. Occasionally, I negotiate service fees with clients who have video or photography needs, and at times, I take on some commercial orders from schools, such as making promotional videos for them. |
 
 
 <br>
