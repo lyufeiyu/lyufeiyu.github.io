@@ -7,12 +7,13 @@ redirect_from:
   - /about.html
 ---
 
-# 研究领域
+# Research field
 
 
-| 兴趣 | 描述 | 
+| Interest | Description | 
 | -------- | ---------- |
-| 具身智能 | __具身智能是一种智能系统__，__它通过具有物理形态的代理与环境直接交互__，__模拟人类或动物的感知和运动能力__。这<br>种智能形式强调了感知和行动之间的相互作用，即通过与物理世界的实时互动来学习和适应，与传统的、仅依赖<br>于预先收集的数据集进行学习的非具身智能形成对比。具身智能的研究领域包括但不限于机器人学、自然语言处<br>理、计算机视觉、机器学习、认知科学、人机交互等，旨在创造能够理解并影响其周围世界的智能体。**我对具身<br>智能感兴趣**，**始于对电影钢铁侠系列的追捧**，**我非常希望未来的各行业真的能够出现类似于“贾维斯”的机器人**，<br>**在我看来，具身智能代表着人工智能领域中的一个前沿和革命性的方向，挑战并扩展了传统AI的边界**。具身智能<br>通过使机器能够在物理世界中感知、学习和行动，模仿人类或动物的方式与环境互动，开辟了研究和应用的新可<br>能性。它不仅涉及技术和工程上的突破，还涉及到对认知科学、心理学以及生物学原理的深入理解和应用，为创<br>造更自然、更有效的人机交互方式提供了新的视角和工具。**我希望未来我能有机会从事机器人学、人机交互等相<br>关领域，十分希望为具身智能这一革命性的领域做出自己的贡献**。 |
+| Embodied Intelligence | Embodied intelligence is a form of artificial intelligence that interacts directly with the environment through physical agents, simulating the perception and motor abilities of humans or animals. This form of intelligence emphasizes the interaction between perception and action, learning and adapting through real-time interaction with the physical world, in contrast to traditional, non-embodied intelligence that relies solely on pre-collected datasets for learning. Research areas of embodied intelligence include but are not limited to robotics, natural language processing, computer vision, machine learning, cognitive science, and human-computer interaction, aiming to create intelligent agents capable of understanding and influencing their surrounding world. I am interested in embodied intelligence, which stems from my admiration for the Iron Man series of movies, and I really hope that robots similar to "Jarvis" will emerge in various industries in the future. To me, embodied intelligence represents a frontier and revolutionary direction in the field of artificial intelligence, challenging and expanding the boundaries of traditional AI. Embodied intelligence, by enabling machines to perceive, learn, and act in the physical world, mimicking the way humans or animals interact with the environment, opens up new possibilities for research and applications. It involves not only technological and engineering breakthroughs but also a deep understanding and application of principles from cognitive science, psychology, and biology, providing new perspectives and tools for creating more natural and effective human-computer interaction. I hope to have the opportunity to work in related fields such as robotics and human-computer interaction in the future, and I am very eager to contribute to this revolutionary field of embodied intelligence. |
+
 
 
 
