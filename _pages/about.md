@@ -104,7 +104,7 @@ redirect_from:
 
 | Time | Description |
 | --- | --- |
-| 2021.08-2021.10 | I was the founder and leader of this project, which eventually produced<br> a frontend demo of a mini-program that was not launched.<br> **Background**: The rapid growth in the number of WeLink users<br> presented us with an opportunity. WeLink has served over 700,000 <br>organizations, including government, enterprises, education, and <br>healthcare sectors. However, there was a lack of a dedicated <br>application tailored to the usage habits of contemporary college students. <br>**Project Content**: To develop a WeLink mini-program, the frontend <br>was implemented using HTML5+CSS+JavaScript+WeLink API (completed), <br>and the backend was planned to be <br>developed using SpringBoot+MySQL. <br>**Personal Contribution**: I coordinated with teammates to produce<br> materials such as business plans, presentations, and videos.<br> Additionally, I participated in the development of the WeLink mini-program <br>frontend. I successfully led the team to participate in <br>the "Internet+" Innovation and Entrepreneurship Competition, <br>and the team was awarded the provincial-level bronze medal. |
+| 2021.08-2021.10 | I was the founder and leader of this project, which eventually produced<br> a frontend demo of a mini-program that was not launched.<br> **Background**: The rapid growth in the number of WeLink users<br> presented us with an opportunity. WeLink has served over 700,000 <br>organizations, including government, enterprises, education, and <br>healthcare sectors. However, there was a lack of a dedicated <br>application tailored to the usage habits of contemporary college students. <br>**Project Content**: To develop a WeLink mini-program, the frontend <br>was implemented using HTML5+CSS+JavaScript+WeLink API (completed), <br>and the backend was planned to be developed using SpringBoot+MySQL. <br>**Personal Contribution**: I coordinated with teammates to produce<br> materials such as business plans, presentations, and videos.<br> Additionally, I participated in the development of the WeLink mini-program <br>frontend. I successfully led the team to participate in <br>the "Internet+" Innovation and Entrepreneurship Competition, <br>and the team was awarded the provincial-level bronze medal. |
 
 
 
@@ -119,7 +119,7 @@ redirect_from:
 
 | Time | Experimental Environment | Experimental Content |
 | --- | --- | --- | 
-| 2022.12 - 2023.01 | Huawei Linux Server | Implement a terminal-based multiplayer instant messaging system using C<br> language. It reads and writes data through a public named pipe (FIFO), uses<br> the select multiplexing technique to monitor messages, and enables<br> communication between different clients. The server is guarded by a thread<br> pool process, serving as a data relay and storage. It also implements logging<br> functionality for different user events, along with setting permissions for<br> logging. |
+| 2022.12 - 2023.01 | Huawei Linux Server | Implement a terminal-based multiplayer instant messaging system <br>using C language. It reads and writes data through a public named <br>pipe (FIFO), uses the select multiplexing technique to monitor messages, <br>and enables communication between different clients. The server <br>is guarded by a thread pool process, serving as a data relay and storage. <br>It also implements logging functionality for different user events, <br> along with setting permissions for logging. |
 
 
 
