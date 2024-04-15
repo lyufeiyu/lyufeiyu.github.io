@@ -96,7 +96,7 @@ redirect_from:
 
 | Time | Description |
 | --------------------------- | ----------------------------------- |
-| 2021.07-2021.12 | Developed a WeChat mini-program for selling near-expiry food products as part of a campus e-commerce<br> entrepreneurship team. I was responsible for frontend development of the mini-program, coding based on UI<br> design. The mini-program was successfully launched, and the project won the Telecommunications Institute<br> Challenge Cup. |
+| 2021.07-2021.12 | Developed a WeChat mini-program for selling near-expiry food products as part of a campus<br> e-commerce entrepreneurship team. I was responsible for frontend development of the mini-program,<br> coding based on UI design. The mini-program was successfully launched, and the project won<br> the Telecommunications Institute Challenge Cup. |
 
 
 
