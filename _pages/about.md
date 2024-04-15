@@ -20,46 +20,46 @@ redirect_from:
 <br>
 
 
-# 教育经历
+# Education Experience
 
-### 求学经历
+### Educational Background
 
-| 学历 | 学校名称 | 所在地 | 就读时间 |
+| Education Level | School Name | Location | Duration |
 |:------:|:----------:|:--------:|:----------:|
-| 小学 | 贯溪小学 | 广东省江门市 | 2008.09 ~ 2014.07 |
-| 初中 | 楼山初级中学 | 广东省江门市 | 2014.09 ~ 2017.07 |
-| 高中 | 江门市第一中学 | 广东省江门市 | 2017.09 ~ 2019.07 |
-| 高中 | 北流市实验中学 | 广西北流市 | 2019.09 ~ 2020.07 |
-| 大学本科 | 深圳大学 | 广东省深圳市 | 2020.09 ~ 2024.07 |
+| Primary School | Guanxi Primary School | Jiangmen City, Guangdong Province | Sep 2008 - Jul 2014 |
+| Junior High School | Loushan Junior High School | Jiangmen City, Guangdong Province | Sep 2014 - Jul 2017 |
+| High School | Jiangmen No.1 High School | Jiangmen City, Guangdong Province | Sep 2017 - Jul 2019 |
+| High School | Beiliu Experimental High School | Beiliu City, Guangxi Province | Sep 2019 - Jul 2020 |
+| Bachelor's Degree | Shenzhen University | Shenzhen City, Guangdong Province | Sep 2020 - Jul 2024 |
 
 
-### 大学本科相关信息
+### Undergraduate Program Information
 
-| 学校 | 专业 | 入学时间 | 预计毕业时间 | 绩点 | 均分 | 现状 |
+| School | Major | Enrollment Date | Expected Graduation Date | GPA | Overall Average | Status |
 |:------:|:------:|:----------:|:--------------:|:------:|:------:|:------:|
-| 深圳大学 | 计算机科学与技术 | 2020.09 | 2024.07 | 3.63 / 4.50 | 84.3 / 100 | 正在留校学习中 |
+| Shenzhen University | Computer Science and Technology | Sep 2020 | Jul 2024 | 3.63 / 4.50 | 84.3 / 100 | Currently studying on campus |
 
  
-### 大学本科所获荣誉/奖项
+### Undergraduate Honors/Awards
 
-| 奖项级别 | 奖项名称 |
+| Award Level | Award Name |
 | :---: | :---: |
-| 校级奖项 | 2020-2021年度电信院“挑战杯”优胜奖（排名3） |
-| 校级奖项 | 2021-2022年度高性能计算机特色班院士奖学金 |
-| 校级奖项 | 2021-2022年度双创之星一等奖 |
-| 校级奖项 | 2020-2021年度双创之星二等奖 |
-| 校级奖项 | 2021-2022年度优秀学生干部二等奖 |
-| 校级奖项 | 2022-2023年度双创之星二等奖 |  
-| 校级奖项 | 2021年度教育部-华为智能基座“未来之星” |
-| 校级奖项 | 2022年度腾讯益友奖 |
-| 省级奖项 | 第八届中国国际“互联网+”大赛高教主赛道广东省银奖 | 
-| 省级奖项 | 第七届中国国际“互联网+”大赛产业赛道广东省铜奖（排名1） | 
-| 省级奖项 | 第十四届蓝桥杯广东省Python程序设计大学B组一等奖 |
-| 国家级奖项 | 第十四届蓝桥杯全国总决赛Python程序设计大学B组三等奖 |
-| 国家级奖项 | 2022-2023年度全国大学生算法设计与编程挑战赛（秋季赛）优秀奖 |
-| 亚太地区奖项及其他 | 2021年度第十一届APMCM亚太地区大学生数学建模竞赛三等奖 |  
-| 亚太地区奖项及其他 | 2022年度欧莱雅商赛优秀奖 |
-| 亚太地区奖项及其他 | 2023年度华为软件精英挑战赛TOP150 |
+| University-Level | 2020-2021 Telecommunications Institute "Challenge Cup" Third Prize (Rank 3) |
+| University-Level | 2021-2022 Academic Scholarship for High-Performance Computing Special Class |
+| University-Level | 2021-2022 First Prize for Innovation and Entrepreneurship Stars |
+| University-Level | 2020-2021 Second Prize for Innovation and Entrepreneurship Stars |
+| University-Level | 2021-2022 Second Prize for Excellent Student Cadres |
+| University-Level | 2022-2023 Second Prize for Innovation and Entrepreneurship Stars |  
+| University-Level | 2021 Education Department-Huawei Intelligent Base "Future Star" |
+| University-Level | 2022 Tencent Friend Award |
+| Provincial-Level | Eighth China International "Internet Plus" Competition Higher Education Main Track Guangdong Province Silver Prize | 
+| Provincial-Level | Seventh China International "Internet Plus" Competition Industry Track Guangdong Province Bronze Prize (Rank 1) | 
+| Provincial-Level | Fourteenth Blue Bridge Cup Guangdong Province Python Programming University Group First Prize |
+| National-Level | Fourteenth Blue Bridge Cup National Finals Python Programming University Group Third Prize |
+| National-Level | 2022-2023 National College Students Algorithm Design and Programming Challenge (Fall) Outstanding Award |
+| Asia-Pacific Region and Others | Third Prize in the Eleventh APMCM Asia-Pacific University Student Mathematical Modeling Competition in 2021 |  
+| Asia-Pacific Region and Others | Outstanding Award in the 2022 L'Oreal Business Competition |
+| Asia-Pacific Region and Others | TOP150 in the 2023 Huawei Software Elite Challenge |
 
 
 <br>
