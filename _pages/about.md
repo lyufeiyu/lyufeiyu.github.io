@@ -89,34 +89,34 @@ redirect_from:
 <br>
 
 
-# 本科项目经历
+# Undergraduate Project Experience
 
-### 一袋临食OneDrop项目
+### Bag of Emergency Food, OneDrop Project
 
-| 时间 | 描述 |
+| Time | Description |
 | --------------------------- | ----------------------------------- |
-| 2021.07-2021.12 | 校园电商创业团队开发微信小程序卖临期食品。此项目我负责开发微信小程序前端，根据UI写代码<br>，最后小程序成功上线且该项目获电信院挑战杯优胜奖。 |
+| 2021.07-2021.12 | Developed a WeChat mini-program for selling near-expiry food products as part of a campus e-commerce entrepreneurship team. I was responsible for frontend development of the mini-program, coding based on UI design. The mini-program was successfully launched, and the project won the Telecommunications Institute Challenge Cup. |
 
 
-### 智慧校园-WeLink小程序（We码）
+### Smart Campus - WeLink Mini Program (We Code)
 
-| 时间 | 描述 |
+| Time | Description |
 | --- | --- |
-| 2021.08-2021.10 | 我是该项目创始人兼负责人，项目最终产出一个小程序前端demo，小程序未上线。 <br> **项目背景**：WeLink用户人数不断快速增长的现状，让我们看到了其中的机遇， WeLink已服务70万+企业<br>组织，涵盖政企、教育、医疗等多个领域，但是缺乏一款专门的、 适应当代大学生使用习惯的应用。 <br> **项目内容**：实现一个WeLink小程序，其前端采用HTML5+CSS+JavaScript+WeLink-API实现（已完成）<br>，后端计划用SpringBoot+MySQL实现。 <br> **个人工作**：协调队友做出BP、PPT、视频等资料，同时参与开发WeLink小程序，前端，成功带领团队<br>打完“互联网+”创赛，团队获“互联网+”省铜荣誉。 |
+| 2021.08-2021.10 | I was the founder and leader of this project, which eventually produced a frontend demo of a mini-program that was not launched. **Background**: The rapid growth in the number of WeLink users presented us with an opportunity. WeLink has served over 700,000 organizations, including government, enterprises, education, and healthcare sectors. However, there was a lack of a dedicated application tailored to the usage habits of contemporary college students. **Project Content**: To develop a WeLink mini-program, the frontend was implemented using HTML5+CSS+JavaScript+WeLink API (completed), and the backend was planned to be developed using SpringBoot+MySQL. **Personal Contribution**: I coordinated with teammates to produce materials such as business plans, presentations, and videos. Additionally, I participated in the development of the WeLink mini-program frontend. I successfully led the team to participate in the "Internet+" Innovation and Entrepreneurship Competition, and the team was awarded the provincial-level bronze medal. |
 
 
 
-### 数据库系统大作业
+### Database Systems Major Project
 
-| 时间 | 实验环境 | 实验内容 |
+| Time | Experimental Environment | Experimental Content |
 | --- | --- | --- | 
-| 2022.11-2022.12 | windows11+python3+flask+MySQL | 为题目中的汽车共享业务设计一个关系数据库，同时编写 <br> 一个前端网页，实现前后端进行简单特定交互的功能。 |
+| 2022.11-2022.12 | windows11+python3+flask+MySQL | Design a relational database for the car-sharing business described in the prompt, and concurrently develop a front-end webpage to facilitate specific interactions between the front and back ends. |
 
-### 系统编程大作业
+### System Programming Major Project
 
-| 时间 | 实验环境 | 实验内容 |
+| Time | Experimental Environment | Experimental Content |
 | --- | --- | --- | 
-| 2022.12-2023.01 | 华为Linux服务器 | 用C语言实现一个终端版多人即时通信系统，其通过公共命名管道fifo读写数据，多<br> 路复用技术select监听信息， 实现不同客户端之间的通信，服务端用线程池守护进<br>程，起数据中转与存储的作用，同时为每个用户不同事件实现了日志功能，并且设<br>置了日志权限等。 |
+| 2022.12 - 2023.01 | Huawei Linux Server | Implement a terminal-based multiplayer instant messaging system using C language. It reads and writes data through a public named pipe (FIFO), uses the select multiplexing technique to monitor messages, and enables communication between different clients. The server is guarded by a thread pool process, serving as a data relay and storage. It also implements logging functionality for different user events, along with setting permissions for logging. |
 
 
 <br><br><br>
