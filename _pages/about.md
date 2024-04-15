@@ -37,7 +37,8 @@ redirect_from:
 
 | School | Major | Enrollment Date | Expected Graduation Date | GPA | Overall Average | Status |
 |:------:|:------:|:----------:|:--------------:|:------:|:------:|:------:|
-| Shenzhen University | Computer Science and Technology | Sep 2020 | Jul 2024 | 3.63 / 4.50 | 84.3 / 100 | Currently studying on campus |
+| Shenzhen<br> University | Computer Science<br> and Technology | Sep 2020 | Jul 2024 | 3.63 / 4.50 | 84.3 / 100 | Currently<br> studying on<br> campus |
+
 
  
 ### Undergraduate Honors/Awards
@@ -95,14 +96,15 @@ redirect_from:
 
 | Time | Description |
 | --------------------------- | ----------------------------------- |
-| 2021.07-2021.12 | Developed a WeChat mini-program for selling near-expiry food products as part of a campus e-commerce entrepreneurship team. I was responsible for frontend development of the mini-program, coding based on UI design. The mini-program was successfully launched, and the project won the Telecommunications Institute Challenge Cup. |
+| 2021.07-2021.12 | Developed a WeChat mini-program for selling near-expiry food products as part of a campus e-commerce<br> entrepreneurship team. I was responsible for frontend development of the mini-program, coding based on UI<br> design. The mini-program was successfully launched, and the project won the Telecommunications Institute<br> Challenge Cup. |
+
 
 
 ### Smart Campus - WeLink Mini Program (We Code)
 
 | Time | Description |
 | --- | --- |
-| 2021.08-2021.10 | I was the founder and leader of this project, which eventually produced a frontend demo of a mini-program that was not launched. **Background**: The rapid growth in the number of WeLink users presented us with an opportunity. WeLink has served over 700,000 organizations, including government, enterprises, education, and healthcare sectors. However, there was a lack of a dedicated application tailored to the usage habits of contemporary college students. **Project Content**: To develop a WeLink mini-program, the frontend was implemented using HTML5+CSS+JavaScript+WeLink API (completed), and the backend was planned to be developed using SpringBoot+MySQL. **Personal Contribution**: I coordinated with teammates to produce materials such as business plans, presentations, and videos. Additionally, I participated in the development of the WeLink mini-program frontend. I successfully led the team to participate in the "Internet+" Innovation and Entrepreneurship Competition, and the team was awarded the provincial-level bronze medal. |
+| 2021.08-2021.10 | I was the founder and leader of this project, which eventually produced a frontend demo of a mini-program that<br> was not launched. **Background**: The rapid growth in the number of WeLink users presented us with an<br> opportunity. WeLink has served over 700,000 organizations, including government, enterprises, education, and<br> healthcare sectors. However, there was a lack of a dedicated application tailored to the usage habits of<br> contemporary college students. **Project Content**: To develop a WeLink mini-program, the frontend was<br> implemented using HTML5+CSS+JavaScript+WeLink API (completed), and the backend was planned to be<br> developed using SpringBoot+MySQL. **Personal Contribution**: I coordinated with teammates to produce<br> materials such as business plans, presentations, and videos. Additionally, I participated in the development of<br> the WeLink mini-program frontend. I successfully led the team to participate in the "Internet+" Innovation and<br> Entrepreneurship Competition, and the team was awarded the provincial-level bronze medal. |
 
 
 
@@ -110,13 +112,15 @@ redirect_from:
 
 | Time | Experimental Environment | Experimental Content |
 | --- | --- | --- | 
-| 2022.11-2022.12 | windows11+python3+flask+MySQL | Design a relational database for the car-sharing business described in the prompt, and concurrently develop a front-end webpage to facilitate specific interactions between the front and back ends. |
+| 2022.11-2022.12 | windows11+python3+flask+MySQL | Design a relational database for the car-sharing business described in the<br> prompt, and concurrently develop a front-end webpage to facilitate specific<br> interactions between the front and back ends. |
+
 
 ### System Programming Major Project
 
 | Time | Experimental Environment | Experimental Content |
 | --- | --- | --- | 
-| 2022.12 - 2023.01 | Huawei Linux Server | Implement a terminal-based multiplayer instant messaging system using C language. It reads and writes data through a public named pipe (FIFO), uses the select multiplexing technique to monitor messages, and enables communication between different clients. The server is guarded by a thread pool process, serving as a data relay and storage. It also implements logging functionality for different user events, along with setting permissions for logging. |
+| 2022.12 - 2023.01 | Huawei Linux Server | Implement a terminal-based multiplayer instant messaging system using C<br> language. It reads and writes data through a public named pipe (FIFO), uses<br> the select multiplexing technique to monitor messages, and enables<br> communication between different clients. The server is guarded by a thread<br> pool process, serving as a data relay and storage. It also implements logging<br> functionality for different user events, along with setting permissions for<br> logging. |
+
 
 
 <br><br><br>
