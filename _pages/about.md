@@ -37,7 +37,7 @@ redirect_from:
 
 | School | Major | Enrollment Date | Expected Graduation Date | GPA | Overall Average | Status |
 |:------:|:------:|:----------:|:--------------:|:------:|:------:|:------:|
-| Shenzhen<br> University | Computer Science<br> and Technology | Sep 2020 | Jul 2024 | 3.63 / 4.50 | 84.3 / 100 | Currently<br> studying on<br> campus |
+| Shenzhen University | Computer Science and Technology | Sep 2020 | Jul 2024 | 3.63 / 4.50 | 84.3 / 100 | Currently studying on campus |
 
 
  
