@@ -1,0 +1,393 @@
+/* --- 1. Design Tokens (变量系统) --- */
+:root {
+    /* Light Mode (常规白/美术馆白) - 默认主题 */
+    --bg-color: #f2f2f2;
+    --bg-secondary: #ffffff;
+    --text-primary: #111111;
+    --text-secondary: #555555;
+    --accent-color: #0044cc; /* 国际克莱因蓝 */
+    --border-color: rgba(0, 0, 0, 0.08);
+    --glass-bg: rgba(255, 255, 255, 0.6);
+    --glass-border: rgba(0, 0, 0, 0.05);
+    --font-sans: 'Plus Jakarta Sans', sans-serif;
+    --font-display: 'Space Grotesk', sans-serif;
+    --shadow-sm: 0 2px 8px rgba(0,0,0,0.04);
+    --shadow-lg: 0 10px 30px rgba(0,0,0,0.08);
+    --glow-opacity: 0.1; 
+    --glow-color: radial-gradient(circle, rgba(0,68,204,0.4) 0%, rgba(255,255,255,0) 70%);
+}
+
+[data-theme="dark"] {
+    /* Tech Dark Mode (科技黑) */
+    --bg-color: #050505;
+    --bg-secondary: #111111;
+    --text-primary: #f0f0f0;
+    --text-secondary: #888888;
+    --accent-color: #3b82f6; /* 荧光蓝 */
+    --border-color: rgba(255, 255, 255, 0.1);
+    --glass-bg: rgba(20, 20, 20, 0.6);
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --shadow-sm: 0 2px 8px rgba(0,0,0,0.4);
+    --shadow-lg: 0 10px 40px rgba(0,0,0,0.6);
+    --glow-opacity: 0.25; 
+    --glow-color: radial-gradient(circle, rgba(59, 130, 246, 0.4) 0%, rgba(0,0,0,0) 70%);
+}
+
+/* --- 2. Global Reset and Backgrounds --- */
+body {
+    margin: 0;
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    font-family: var(--font-sans);
+    transition: background-color 0.5s ease, color 0.5s ease;
+    overflow-x: hidden;
+}
+
+.bg-noise {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: -1;
+}
+
+.ambient-glow {
+    position: fixed;
+    top: -20%; right: -10%;
+    width: 800px; height: 800px;
+    background: var(--glow-color);
+    filter: blur(100px);
+    opacity: var(--glow-opacity);
+    z-index: -2;
+    transition: opacity 0.5s;
+    animation: floatGlow 15s infinite alternate ease-in-out;
+}
+
+@keyframes floatGlow {
+    0% { transform: translate(0, 0) scale(1); }
+    100% { transform: translate(-50px, 50px) scale(1.1); }
+}
+
+/* --- 3. Navigation (岛屿式悬浮) --- */
+.navbar {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    width: auto;
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    gap: 4rem; /* 增大整体间距 */
+    padding: 0.8rem 3rem; 
+    background: var(--glass-bg);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid var(--glass-border);
+    border-radius: 100px;
+    box-shadow: var(--shadow-sm);
+    transition: all 0.3s;
+}
+
+.logo {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 1.1rem;
+    letter-spacing: -0.5px;
+}
+.logo .dot { color: var(--accent-color); }
+
+.nav-links a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: color 0.3s;
+    margin: 0 1rem; /* 增加链接间的额外横向间距 */ 
+}
+.nav-links a:hover, .nav-links a.active { color: var(--text-primary); }
+
+.theme-btn {
+    background: transparent;
+    border: 1px solid var(--border-color);
+    border-radius: 50%;
+    width: 32px; height: 32px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-primary);
+    transition: transform 0.2s, background 0.2s;
+    font-size: 1rem;
+}
+.theme-btn:hover { background: var(--border-color); transform: rotate(15deg); }
+[data-theme="light"] .icon-sun { display: none; }
+[data-theme="dark"] .icon-moon { display: none; }
+
+/* --- 4. Hero Section --- */
+.main-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 140px 1.5rem 4rem 1.5rem;
+}
+
+.hero-layout {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 4rem;
+    align-items: center;
+    margin-bottom: 6rem;
+}
+
+.hero-text h1 {
+    font-family: var(--font-display);
+    font-size: 5rem;
+    line-height: 0.9;
+    margin: 0 0 1.5rem 0;
+    letter-spacing: -2px;
+    background: linear-gradient(135deg, var(--text-primary) 30%, var(--text-secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-intro {
+    font-size: 1.15rem;
+    color: var(--text-secondary);
+    max-width: 450px;
+    line-height: 1.7;
+    margin-bottom: 2rem;
+}
+
+.supervisor-link {
+    display: inline-block;
+    margin-top: 0.5rem;
+    padding-bottom: 2px;
+    border-bottom: 1px dashed var(--text-secondary);
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    transition: all 0.3s;
+}
+.supervisor-link:hover {
+    color: var(--accent-color);
+    border-bottom-style: solid;
+}
+
+.stat-row {
+    display: flex;
+    gap: 3rem;
+    border-top: 1px solid var(--border-color);
+    padding-top: 1.5rem;
+}
+.stat-item span { display: block; }
+.stat-num { font-family: var(--font-display); font-size: 1.5rem; font-weight: 700; }
+.stat-label { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; color: var(--text-secondary); }
+
+/* --- 5. Hero 区域：图片叠放特效 (Polaroid Stack) --- */
+.hero-visual {
+    position: relative;
+    background: transparent;
+    border: none;
+    height: 450px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.photo-card {
+    position: absolute;
+    width: 260px;
+    height: 340px;
+    background: var(--bg-secondary);
+    padding: 10px 10px 40px 10px; /* 底部留白像拍立得 */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    border-radius: 4px;
+    transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+    transform-origin: center center;
+    border: 1px solid var(--glass-border);
+    cursor: pointer;
+    opacity: 1; /* 核心调整：默认全部可见 */
+    pointer-events: auto;
+}
+
+.photo-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: none; /* 确保图片是彩色 */
+    border-radius: 2px;
+}
+
+/* 初始状态：轻微堆叠效果 */
+/* ---------------------------------------------------- */
+.photo-card:nth-child(1) { 
+    /* 左下角：旋转 -8度，向左下平移 */
+    transform: rotate(-8deg) translate(-25px, 15px); 
+    z-index: 1; /* 底部 */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1); 
+}
+.photo-card:nth-child(2) { 
+    /* 右上角：旋转 5度，向右上平移 */
+    transform: rotate(5deg) translate(15px, -10px); 
+    z-index: 2; 
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+.photo-card:nth-child(3) { 
+    /* 居中顶层：旋转 -3度，无平移 */
+    transform: rotate(-3deg) translate(0, 0); 
+    z-index: 3; 
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
+/* ---------------------------------------------------- */
+
+
+/* 悬停特效：完全散开，不遮挡 */
+/* ---------------------------------------------------- */
+.hero-visual:hover .photo-card {
+    opacity: 1; 
+    pointer-events: auto;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.25); /* 悬停时阴影加深 */
+}
+
+.hero-visual:hover .photo-card:nth-child(1) { 
+    /* 移到最左边：旋转 -25度，向左平移 400px (足够宽) */
+    transform: rotate(-25deg) translate(-300px, 0px) scale(1.05); 
+    z-index: 4; 
+}
+.hero-visual:hover .photo-card:nth-child(2) { 
+    /* 保持居中：旋转 0度，向上平移 -40px，轻微放大 */
+    transform: rotate(0deg) translate(0px, -40px) scale(1.1);
+    z-index: 5;
+}
+.hero-visual:hover .photo-card:nth-child(3) { 
+    /* 移到最右边：旋转 25度，向右平移 400px (足够宽) */
+    transform: rotate(25deg) translate(300px, 0px) scale(1.05); 
+    z-index: 6; 
+}
+/* ---------------------------------------------------- */
+
+
+/* --- 6. Project Grid (不规则布局 - Bento Grid) --- */
+.section-title {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: var(--text-primary);
+}
+.section-title::after {
+    content: ""; flex: 1; height: 1px; background: var(--border-color);
+}
+
+.grid-wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 320px; /* 基础行高 */
+    gap: 1.5rem;
+}
+
+.span-col-2 { grid-column: span 2; } /* 跨两列 */
+.span-row-2 { grid-row: span 2; } /* 跨两行 */
+
+.project-card {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.3s;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+}
+
+.project-card.style-life {
+    border-radius: 40px; /* 生活类圆角更大 */
+}
+
+.card-img { height: 60%; } 
+.project-card.span-row-2 .card-img { height: 75%; } 
+
+.card-img img {
+    width: 100%; height: 100%; object-fit: cover;
+    transition: transform 0.6s;
+}
+.project-card:hover .card-img img { transform: scale(1.05); }
+
+.card-content { padding: 1.5rem; flex: 1; }
+.card-tag { 
+    font-size: 0.75rem; font-weight: 700; color: var(--accent-color); 
+    text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 0.5rem; display: block;
+}
+.card-title { margin: 0 0 0.5rem 0; font-family: var(--font-display); font-size: 1.4rem; line-height: 1.2;}
+.card-excerpt { font-size: 0.95rem; color: var(--text-secondary); margin-bottom: 1rem; }
+.read-link { 
+    font-size: 0.9rem; font-weight: 600; color: var(--text-primary); 
+    border-bottom: 1px solid var(--text-primary); padding-bottom: 2px;
+}
+
+/* 文章详情样式 */
+.article-container {
+    background: var(--bg-secondary);
+    padding: 3rem;
+    border-radius: 20px;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-sm);
+    animation: fadeIn 0.5s ease;
+}
+.article-body { font-size: 1.1rem; line-height: 1.8; color: var(--text-primary); }
+.article-body h2 { font-family: var(--font-display); margin-top: 2.5rem; }
+.article-body a { color: var(--accent-color); }
+.article-body img { border-radius: 8px; max-width: 100%; }
+
+@keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+
+/* --- 7. Footer 样式 --- */
+.site-footer {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 4rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.site-footer p {
+    margin: 0;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+/* 移动端适配 */
+@media (max-width: 900px) {
+    .hero-layout { grid-template-columns: 1fr; gap: 2rem; }
+    .hero-text h1 { font-size: 3.5rem; }
+    .hero-visual { height: 350px; }
+    
+    /* 移动端照片堆叠收缩 */
+    .photo-card { width: 180px; height: 240px; }
+    
+    /* 移动端初始堆叠角度略微变小 */
+    .photo-card:nth-child(1) { transform: rotate(-6deg) translate(-15px, 10px); } 
+    .photo-card:nth-child(2) { transform: rotate(4deg) translate(10px, -5px); }
+    .photo-card:nth-child(3) { transform: rotate(-2deg) translate(0, 0); }
+    
+    /* 移动端悬停散开，减少位移距离，避免超出屏幕 */
+    .hero-visual:hover .photo-card:nth-child(1) { transform: rotate(-15deg) translate(-150px, 0px) scale(1); }
+    .hero-visual:hover .photo-card:nth-child(2) { transform: rotate(0deg) translate(0px, -10px) scale(1); }
+    .hero-visual:hover .photo-card:nth-child(3) { transform: rotate(15deg) translate(150px, 0px) scale(1); }
+
+    /* 移动端网格强制单列 */
+    .grid-wrapper { grid-template-columns: 1fr; grid-auto-rows: auto; }
+    .span-col-2, .span-col-4, .span-row-2 { grid-column: auto; grid-row: auto; }
+    .project-card.span-row-2 .card-img { height: 250px; }
+    .card-img { height: 200px; }
+    .nav-container { gap: 2rem; padding: 0.8rem 1.5rem; }
+}
