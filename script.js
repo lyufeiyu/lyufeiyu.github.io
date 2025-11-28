@@ -182,37 +182,37 @@ const posts = [
         layout: "wide", // 高卡片 (跨 2 行)
         excerpt: "Stories, photos, and reflections from my four years at university.",
         contentFile: "content/post2.md",
-        image: "images/MO.jpg"
+        image: "images/sixP.jpg"
     },
     {
         id: "post3",
-        title: "LLM Agent for Automated Coding",
+        title: "LLM-MTPSO: Large Language Model-Assisted Multi-task Particle Swarm Optimization for Imbalanced Classification",
         date: "2025.03",
-        category: "Project",
-        layout: "big", // 正常大小
-        excerpt: "Building a smart agent to assist in complex refactoring and code generation.",
-        contentFile: null,
-        image: "images/robot.jpg" 
+        category: "Paper",
+        layout: "wide", // 正常大小
+        excerpt: "Building a smart framework to assist in imbalanced classification.",
+        contentFile: "content/post3.md",
+        image: "images/MIND2025.jpg" 
     },
+    // {
+    //     id: "post4",
+    //     title: "City Walk: Discovering Shenzhen's Techscape",
+    //     date: "2025.02",
+    //     category: "Life",
+    //     layout: "normal",
+    //     excerpt: "Exploring the tech jungle on a rainy Sunday.",
+    //     contentFile: null,
+    //     image: "images/robot.jpg"
+    // },
     {
         id: "post4",
-        title: "City Walk: Discovering Shenzhen's Techscape",
-        date: "2025.02",
-        category: "Life",
-        layout: "normal",
-        excerpt: "Exploring the tech jungle on a rainy Sunday.",
-        contentFile: null,
-        image: "images/robot.jpg"
-    },
-    {
-        id: "post5",
-        title: "New Paper: MTO with Transfer Learning",
-        date: "2025.01",
-        category: "Research",
+        title: "An Angular Quantization-Guided Evolutionary Framework for Feature Selection in High-Dimensional Imbalanced Classification",
+        date: "2025.11",
+        category: "Paper",
         layout: "wide", 
-        excerpt: "My latest work on Multi-Task Optimization (MTO) has been accepted by TEVC.",
-        contentFile: null,
-        image: "images/neural.jpg"
+        excerpt: "A work on angular quantization-guided evolutionary framework.",
+        contentFile: "content/post4.md",
+        image: "images/AQ-NSGA.jpg"
     }
 ];
 
