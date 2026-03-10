@@ -1,9 +1,3 @@
-<h1 class="fancy-title">Master's Journey</h1>
-
-Currently pursuing master's degree with 28 credits completed. Average score: 88.3/100, GPA: 3.68/4.0.
-
-
-
 <h1 class="fancy-title">Before Master's Degree</h1>
 
 ## Education Experience
@@ -20,7 +14,7 @@ In September 2020, I was admitted to **Shenzhen University** to pursue a **Bache
 
 ## Undergraduate Academic Overview
 
-At Shenzhen University, I majored in Computer Science and Technology. I enrolled in September 2020 and graduated in July 2024. My academic performance includes a **GPA of 3.60 out of 4.50**, with an **overall average score of 83.9 out of 100**. 
+At Shenzhen University, I majored in Computer Science and Technology. I enrolled in September 2020 and graduated in July 2024.
 
 <!-- Along this journey, I am grateful to the friends and teachers who have helped me, as well as those who have attacked me. -->
 Throughout this journey, I am grateful to all the friends and teachers who have been part of my growth.
