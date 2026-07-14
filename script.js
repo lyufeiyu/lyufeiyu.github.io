@@ -2,6 +2,7 @@ const contentArea = document.getElementById("content-area");
 const navLinks = document.querySelectorAll(".nav-links a");
 const themeBtn = document.getElementById("theme-toggle");
 const langBtn = document.getElementById("lang-toggle");
+const visitorCount = document.getElementById("visitor-count");
 
 // file:// 预览或严格隐私模式可能禁用 localStorage；禁用时仍保证页面正常渲染。
 const storage = {
@@ -20,7 +21,8 @@ const translations = {
         navHome: "主页",
         navProject: "项目",
         navStory: "故事",
-        footer: "由 Feiyu 设计。",
+        footer: "更新于 2026/07。",
+        visitors: "访客数",
         personalHomepage: "个人主页",
         role: "深圳大学 · 计算机科学与技术硕士研究生",
         summary: "研究方向聚焦于 LLM 辅助的元启发式算法、智能体设计与组合神经网络优化。",
@@ -79,7 +81,8 @@ const translations = {
         navHome: "Home",
         navProject: "Project",
         navStory: "Story",
-        footer: "Designed by Feiyu.",
+        footer: "Updated in 2026/07.",
+        visitors: "Visitors",
         personalHomepage: "PERSONAL HOMEPAGE",
         role: "M.Sc. Student in Computer Science and Technology at Shenzhen University",
         summary: "My research focuses on LLM-assisted metaheuristic algorithm design, agent design, and combinatorial neural network optimization.",
@@ -168,6 +171,35 @@ langBtn.addEventListener("click", () => {
 
 initTheme();
 updateStaticLanguage();
+
+// GitHub Pages 是静态站点，因此使用远程计数器持久化总访客数。
+// localStorage 标记让同一浏览器只贡献一次计数；清除数据或更换设备会被视为新访客。
+async function initVisitorCounter() {
+    const counterBase = "https://api.counterapi.dev/v1/lyufeiyu-github-io/unique-visitors";
+    const visitorKey = "visitor-counted-v1";
+    const isNewVisitor = storage.get(visitorKey) !== "true";
+    const endpoint = isNewVisitor ? `${counterBase}/up` : counterBase;
+
+    if (isNewVisitor) storage.set(visitorKey, "pending");
+
+    try {
+        const response = await fetch(endpoint, { cache: "no-store" });
+        if (!response.ok) throw new Error(`Visitor counter returned ${response.status}`);
+
+        const data = await response.json();
+        const count = Number(data.count ?? data.value);
+        if (!Number.isFinite(count)) throw new Error("Visitor counter returned an invalid value");
+
+        visitorCount.textContent = count.toLocaleString(currentLang === "zh" ? "zh-CN" : "en-US");
+        if (isNewVisitor) storage.set(visitorKey, "true");
+    } catch (error) {
+        if (isNewVisitor) storage.set(visitorKey, "");
+        visitorCount.textContent = "—";
+        console.warn("Unable to load visitor count.", error);
+    }
+}
+
+initVisitorCounter();
 
 function renderMarkdown(mdText) {
     const html = window.marked ? marked.parse(mdText) : mdText;
