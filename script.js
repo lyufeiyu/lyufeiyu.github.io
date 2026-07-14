@@ -23,6 +23,7 @@ const translations = {
         navStory: "故事",
         footer: "更新于 2026/07。",
         visitors: "访客数",
+        visitorCounting: "正在统计…",
         personalHomepage: "个人主页",
         role: "深圳大学 · 计算机科学与技术硕士研究生",
         summary: "研究方向聚焦于 LLM 辅助的元启发式算法、智能体设计与组合神经网络优化。",
@@ -83,6 +84,7 @@ const translations = {
         navStory: "Story",
         footer: "Updated in 2026/07.",
         visitors: "Visitors",
+        visitorCounting: "Counting…",
         personalHomepage: "PERSONAL HOMEPAGE",
         role: "M.Sc. Student in Computer Science and Technology at Shenzhen University",
         summary: "My research focuses on LLM-assisted metaheuristic algorithm design, agent design, and combinatorial neural network optimization.",
@@ -172,30 +174,51 @@ langBtn.addEventListener("click", () => {
 initTheme();
 updateStaticLanguage();
 
-// GitHub Pages 是静态站点，因此使用远程计数器持久化总访客数。
-// localStorage 标记让同一浏览器只贡献一次计数；清除数据或更换设备会被视为新访客。
+// 新访客必须由远程接口成功登记后才显示数字；失败时保持“正在统计…”并自动重试。
+// 已登记的浏览器使用本地缓存，刷新页面不会重复计数或重复请求。
 async function initVisitorCounter() {
-    const counterBase = "https://api.counterapi.dev/v1/lyufeiyu-github-io/unique-visitors";
+    const counterBase = "https://api.counterapi.dev/v1/lyufeiyu-github-io/unique-visitors/";
     const visitorKey = "visitor-counted-v1";
-    const isNewVisitor = storage.get(visitorKey) !== "true";
-    const endpoint = isNewVisitor ? `${counterBase}/up` : counterBase;
+    const countKey = "visitor-count-cache-v1";
 
-    if (isNewVisitor) storage.set(visitorKey, "pending");
-
-    try {
-        const response = await fetch(endpoint, { cache: "no-store" });
-        if (!response.ok) throw new Error(`Visitor counter returned ${response.status}`);
-
-        const data = await response.json();
-        const count = Number(data.count ?? data.value);
-        if (!Number.isFinite(count)) throw new Error("Visitor counter returned an invalid value");
-
+    const cachedValue = storage.get(countKey);
+    const cachedCount = cachedValue === null ? NaN : Number(cachedValue);
+    const renderCount = count => {
         visitorCount.textContent = count.toLocaleString(currentLang === "zh" ? "zh-CN" : "en-US");
-        if (isNewVisitor) storage.set(visitorKey, "true");
-    } catch (error) {
-        if (isNewVisitor) storage.set(visitorKey, "");
-        visitorCount.textContent = "—";
-        console.warn("Unable to load visitor count.", error);
+    };
+    const isCounted = storage.get(visitorKey) === "true";
+
+    if (isCounted && Number.isFinite(cachedCount)) {
+        renderCount(cachedCount);
+        return;
+    }
+
+    visitorCount.textContent = t("visitorCounting");
+
+    const endpoint = `${counterBase}up`;
+    let retryDelay = 3000;
+
+    storage.set(visitorKey, "pending");
+
+    while (true) {
+        try {
+            const response = await fetch(endpoint, { cache: "no-store" });
+            if (!response.ok) throw new Error(`Visitor counter returned ${response.status}`);
+
+            const data = await response.json();
+            const count = Number(data.count ?? data.value);
+            if (!Number.isFinite(count)) throw new Error("Visitor counter returned an invalid value");
+
+            storage.set(countKey, String(count));
+            storage.set(visitorKey, "true");
+            renderCount(count);
+            return;
+        } catch (error) {
+            visitorCount.textContent = t("visitorCounting");
+            console.warn(`Unable to update visitor count; retrying in ${retryDelay / 1000}s.`, error);
+            await new Promise(resolve => setTimeout(resolve, retryDelay));
+            retryDelay = Math.min(retryDelay * 2, 60000);
+        }
     }
 }
 
