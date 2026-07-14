@@ -13,7 +13,7 @@ const storage = {
     }
 };
 
-let currentLang = storage.get("language") || "zh";
+let currentLang = storage.get("language") || "en";
 
 const translations = {
     zh: {
