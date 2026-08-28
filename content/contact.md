@@ -3,7 +3,8 @@ Hi there! Feel free to reach out to me through any of the platforms below — I'
 #### 📧 Email
 - **Email**: 2400101051@mails.szu.edu.cn
 
-#### 🌐 Dating Site
+#### 🌐 Academic & Code Profiles
+- [Google Scholar](https://scholar.google.com/citations?user=ZsSOXRAAAAAJ&hl=en)
 - [GitHub](https://github.com/lyufeiyu)
 - [Gitee](https://gitee.com/lvfeiyu0421)
 
