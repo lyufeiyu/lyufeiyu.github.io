@@ -764,7 +764,7 @@ const pages = {
                     <article class="project-entry">
                         <div class="project-meta"><span>01</span><span>${t("personalProject")}</span></div>
                         <div class="project-copy">
-                            <div class="project-title-row"><h2>ScholarOS <span class="project-title-note">${t("scholarOsTimeline")}</span></h2></div>
+                            <div class="project-title-row"><h2><a href="https://github.com/lyufeiyu/scholaros" target="_blank" rel="noopener">ScholarOS ↗</a> <span class="project-title-note">${t("scholarOsTimeline")}</span></h2></div>
                             <p class="project-lead">${t("scholarOsLead")}</p>
                             <p>${t("scholarOsBody")}</p>
                             <p class="project-tags">${t("scholarOsTags")}</p>
