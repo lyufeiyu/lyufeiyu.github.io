@@ -14,7 +14,8 @@ const storage = {
     }
 };
 
-let currentLang = storage.get("language") || "en";
+const languageKey = "language-v2";
+let currentLang = storage.get(languageKey) || "en";
 let latestVisitorCount = null;
 let visitorDisplayState = "loading";
 
@@ -254,7 +255,7 @@ function updateStaticLanguage() {
 
 langBtn.addEventListener("click", () => {
     currentLang = currentLang === "zh" ? "en" : "zh";
-    storage.set("language", currentLang);
+    storage.set(languageKey, currentLang);
     updateStaticLanguage();
     renderVisitorState();
     router();
@@ -388,7 +389,7 @@ const papers = [
             zh: ["ESCI", "中科院一区 Top", "JCR Q1", "IF 9.8"],
             en: ["ESCI", "CAS Q1 · Top", "JCR Q1", "IF 9.8"]
         },
-        status: { zh: "已发表（在线）", en: "Published online" },
+        status: { zh: "已发表", en: "Published" },
         doi: "https://doi.org/10.1007/s42524-026-6014-5",
         summary: {
             zh: "面向工业不平衡与非平稳数据分布，构建由大语言模型驱动的特征元模型演化框架，以自动搜索有效的特征变换。",
@@ -405,7 +406,7 @@ const papers = [
             zh: ["SCI", "中科院一区 Top", "JCR Q1", "IF 11.3"],
             en: ["SCI", "CAS Q1 · Top", "JCR Q1", "IF 11.3"]
         },
-        status: { zh: "已发表（在线）", en: "Published online" },
+        status: { zh: "已发表", en: "Published" },
         doi: "https://doi.org/10.1109/TCYB.2026.3713350",
         summary: {
             zh: "将局部区域建模为多目标特征选择任务，并通过基于任务反馈的自适应知识迁移提升高维分类中的搜索效率。",
