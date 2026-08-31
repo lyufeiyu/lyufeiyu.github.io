@@ -620,6 +620,16 @@ body {
 
 .paper-list { border-bottom: 1px solid var(--border-color); }
 
+.submission-heading {
+    padding: 1.25rem 0 0.7rem;
+    border-top: 1px solid var(--border-color);
+    color: var(--accent-color);
+    font-family: var(--font-display);
+    font-size: 0.76rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
 .paper-row {
     display: grid;
     grid-template-columns: 42px minmax(0, 1fr) 54px;
@@ -636,6 +646,28 @@ body {
     padding-left: 0.45rem;
     color: var(--accent-color);
     outline: none;
+}
+
+.paper-row-submission {
+    cursor: default;
+}
+
+.paper-row-submission:hover {
+    padding-left: 0;
+    color: inherit;
+}
+
+.paper-row-submission .paper-summary {
+    max-width: 780px;
+    margin: 0.8rem 0 0;
+    color: var(--text-secondary);
+    font-size: 0.84rem;
+    line-height: 1.7;
+}
+
+.paper-row-submission .paper-summary strong {
+    color: var(--accent-color);
+    font-weight: 600;
 }
 
 .paper-index,

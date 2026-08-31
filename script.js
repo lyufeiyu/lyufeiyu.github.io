@@ -42,7 +42,8 @@ const translations = {
         advisor: "周宇 教授 ↗",
         research: "科研成果",
         researchEn: "Publications",
-        researchHint: "* 通讯作者 · 点击论文查看详情",
+        researchHint: "* 通讯作者 · 已发表论文可点击查看详情",
+        underReview: "在投论文",
         selected: "精选经历",
         selectedEn: "Selected Experience",
         honorsLabel: "竞赛荣誉",
@@ -146,7 +147,8 @@ const translations = {
         advisor: "Prof. Yu Zhou ↗",
         research: "Publications",
         researchEn: "Research",
-        researchHint: "* Corresponding author · Select a paper for details",
+        researchHint: "* Corresponding author · Select a published paper for details",
+        underReview: "Under review",
         selected: "Selected Experience",
         selectedEn: "Highlights",
         honorsLabel: "Honors",
@@ -468,6 +470,20 @@ const papers = [
     }
 ];
 
+const submissions = [
+    {
+        year: "2026",
+        title: "MT-ADS: Multi-Task Angular Decomposition Solver for Large-Scale Vehicle Routing Problems",
+        authors: "Guanghua Lyu, Yuepeng Zheng, Zhenkun Wang, Yu Zhou",
+        venue: "AAAI 2027 Conference Submission",
+        status: { zh: "在投", en: "Under review" },
+        summary: {
+            zh: "MT-ADS 结合无需训练的角度分解、面向分布的混合专家求解器和两阶段路径修复，高效求解大规模多任务车辆路径问题，并具备较强的零样本泛化能力。",
+            en: "MT-ADS combines training-free angular decomposition, a distribution-aware mixture-of-experts solver, and two-stage tour repair to efficiently solve large-scale multi-task vehicle routing problems with strong zero-shot generalization."
+        }
+    }
+];
+
 const awards = [
     {
         year: "2021",
@@ -703,6 +719,22 @@ function renderResearchRows() {
     `).join("");
 }
 
+function renderSubmissionRows() {
+    return `
+        <div class="submission-heading">${t("underReview")}</div>
+        ${submissions.map(submission => `
+            <article class="paper-row paper-row-submission">
+                <span class="paper-index">${submission.year}</span>
+                <div class="paper-main">
+                    <h3>${submission.title}</h3>
+                    <p class="paper-authors">${submission.authors}</p>
+                    <p class="paper-meta"><span class="paper-venue">${submission.venue}</span><span class="paper-status">· ${submission.status[currentLang]}</span></p>
+                    <p class="paper-summary"><strong>TLDR:</strong> ${submission.summary[currentLang]}</p>
+                </div>
+            </article>
+        `).join("")}`;
+}
+
 const pages = {
     home: () => fadeOutIn(() => {
         contentArea.innerHTML = `
@@ -729,7 +761,7 @@ const pages = {
                 <section class="profile-section research-section">
                     <h2>${t("research")} <span>${t("researchEn")}</span></h2>
                     <p class="section-caption">${t("researchHint")}</p>
-                    <div class="paper-list">${renderResearchRows()}</div>
+                    <div class="paper-list">${renderResearchRows()}${renderSubmissionRows()}</div>
                 </section>
 
                 <section class="profile-section honors-section">
