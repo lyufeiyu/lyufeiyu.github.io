@@ -486,6 +486,21 @@ const submissions = [
 
 const awards = [
     {
+        year: "2026",
+        level: { zh: "国家级", en: "National" },
+        name: { zh: "国家奖学金", en: "National Scholarship" },
+        featured: true
+    },
+    {
+        year: "2021",
+        level: { zh: "省级", en: "Provincial" },
+        name: {
+            zh: "第七届中国国际“互联网+”大学生创新创业大赛产业命题赛道广东省铜奖（团队排名第 1，负责项目并进行 welink 小程序开发）",
+            en: "Guangdong Bronze Award, 7th China International College Students’ Internet+ Competition, Industry Track (Team Rank 1, led the project and contributed to Welink Mini Program development)"
+        },
+        featured: true
+    },
+    {
         year: "2021",
         level: { zh: "亚太地区", en: "Asia-Pacific" },
         name: {
@@ -513,13 +528,19 @@ const awards = [
         featured: true
     },
     {
-        year: "2021",
-        level: { zh: "省级", en: "Provincial" },
-        name: {
-            zh: "第七届中国国际“互联网+”大学生创新创业大赛产业命题赛道广东省铜奖（团队排名第 1，负责项目并进行 welink 小程序开发）",
-            en: "Guangdong Bronze Award, 7th China International College Students’ Internet+ Competition, Industry Track (Team Rank 1, led the project and contributed to Welink Mini Program development)"
-        },
-        featured: true
+        year: "2024",
+        level: { zh: "校级", en: "University" },
+        name: { zh: "硕士特等奖学金", en: "Special Prize, Master's Scholarship" }
+    },
+    {
+        year: "2025",
+        level: { zh: "校级", en: "University" },
+        name: { zh: "硕士二等奖学金", en: "Second Prize, Master's Scholarship" }
+    },
+    {
+        year: "2026",
+        level: { zh: "校级", en: "University" },
+        name: { zh: "硕士一等奖学金", en: "First Prize, Master's Scholarship" }
     },
     {
         year: "2025",
