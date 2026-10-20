@@ -96,9 +96,10 @@ const translations = {
         scholarOsStateTitle: "状态与质量层",
         scholarOsStateBody: "SQLite 与 artifact 目录保存项目状态、搜索溯源和草稿。九项确定性检查覆盖引文、方法要素、图表计划、结果来源与研究者责任声明。",
         scholarOsScreens: "产品界面",
-        scholarOsScreenWorkspace: "研究工作台总览",
-        scholarOsScreenWorkflow: "七阶段项目工作流",
-        scholarOsScreenSearch: "跨来源论文检索",
+        scholarOsScreenWorkspace: "网站首页",
+        scholarOsScreenWorkflow: "研究详情",
+        scholarOsScreenSearch: "研究结束参考图",
+        scholarOsScreenExample: "ScholarOS 实测示例",
         scholarOsScreenTerminal: "终端研究工作台",
         scholarOsScreenWeb: "本地 Web 服务",
         schedulingTitle: "基于 AI 的自动化排产与智能优化",
@@ -201,9 +202,10 @@ const translations = {
         scholarOsStateTitle: "State and quality layer",
         scholarOsStateBody: "SQLite and artifact storage retain project state, search provenance, and drafts. Nine deterministic checks cover citations, method elements, figure/table plans, result provenance, and researcher responsibility.",
         scholarOsScreens: "Product screens",
-        scholarOsScreenWorkspace: "Research workspace overview",
-        scholarOsScreenWorkflow: "Seven-stage project workflow",
-        scholarOsScreenSearch: "Cross-source paper search",
+        scholarOsScreenWorkspace: "Website home",
+        scholarOsScreenWorkflow: "Research details",
+        scholarOsScreenSearch: "Completed research example",
+        scholarOsScreenExample: "ScholarOS walkthrough example",
         scholarOsScreenTerminal: "Terminal research workspace",
         scholarOsScreenWeb: "Local web service",
         schedulingTitle: "AI-powered Automated Scheduling and Intelligent Optimization",
@@ -664,25 +666,28 @@ function renderContactGrid() {
 
 function renderScholarOsGallery() {
     const screens = [
-        ["research-workspace-overview.jpg", "scholarOsScreenWorkspace"],
-        ["research-project-workflow.jpg", "scholarOsScreenWorkflow"],
-        ["cross-source-paper-search.jpg", "scholarOsScreenSearch"],
+        ["ScholarOS-example.png", "scholarOsScreenExample"],
+        ["1-网站首页.png", "scholarOsScreenWorkspace"],
+        ["2-研究详情.png", "scholarOsScreenWorkflow"],
+        ["3-研究结束参考图.png", "scholarOsScreenSearch"],
         ["terminal-workspace.jpg", "scholarOsScreenTerminal"],
         ["terminal-web-server.jpg", "scholarOsScreenWeb"]
     ];
+    const renderScreens = items => items.map(([file, caption]) => `
+        <figure>
+            <button class="project-image-trigger" type="button" data-image-src="images/scholaros/${file}" data-image-caption="${t(caption)}" aria-label="${t("scholarOsZoom")}: ${t(caption)}">
+                <img src="images/scholaros/${file}" alt="${t(caption)}" loading="lazy">
+            </button>
+            <figcaption>${t(caption)}</figcaption>
+        </figure>
+    `).join("");
 
     return `
         <section class="project-gallery" aria-label="${t("scholarOsScreens")}">
             <h3>${t("scholarOsScreens")}</h3>
             <div class="project-gallery-grid">
-                ${screens.map(([file, caption]) => `
-                    <figure>
-                        <button class="project-image-trigger" type="button" data-image-src="images/scholaros/${file}" data-image-caption="${t(caption)}" aria-label="${t("scholarOsZoom")}: ${t(caption)}">
-                            <img src="images/scholaros/${file}" alt="${t(caption)}" loading="lazy">
-                        </button>
-                        <figcaption>${t(caption)}</figcaption>
-                    </figure>
-                `).join("")}
+                <div class="project-gallery-featured">${renderScreens(screens.slice(0, 4))}</div>
+                <div class="project-gallery-terminals">${renderScreens(screens.slice(4))}</div>
             </div>
             <div class="project-lightbox" hidden role="dialog" aria-modal="true" aria-label="${t("scholarOsLightbox")}" tabindex="-1">
                 <button class="project-lightbox-close" type="button" aria-label="${t("scholarOsClose")}">×</button>
